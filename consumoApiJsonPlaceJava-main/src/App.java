@@ -14,6 +14,19 @@ public class App {
             System.out.println("Body:" + post.getBody());
             System.out.println("----------------------");
         });
+        Post postById = postService.getPostById(1);
+        System.out.println(postById);
+
+            Post post01 = new Post(1, "god", "lalalalal" );
+            Post createdPost = postService.createPost(post01);
+           System.out.println(createdPost);
+
+           Post updatedPost = postService.updatePost(post01, 3);
+            System.out.println(updatedPost);
+
+            postService.deletePost(7);
+
 
     }
+
 }
